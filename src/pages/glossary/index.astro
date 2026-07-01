@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Glossary | Dear Bug Diary">
+  <article>
+    <p class="eyebrow">Glossary</p>
+    <h1>Words Bugsy keeps underlined</h1>
+    <p>Plain definitions for common QA terms used around the diary.</p>
+  </article>
+
+  <ul class="definition-list">
+    <li>
+      <strong>Regression Test:</strong>
+      A test that checks whether previously working behavior still works after changes.
+    </li>
+    <li>
+      <strong>Regression Asset:</strong>
+      A reusable test scenario, checklist, data set, or evidence pattern created from a past bug or risk.
+    </li>
+    <li>
+      <strong>Flaky Test:</strong>
+      A test that sometimes passes and sometimes fails without a clear product change.
+    </li>
+    <li>
+      <strong>Test Evidence:</strong>
+      Screenshots, logs, reports, outputs, or other proof that supports a test result.
+    </li>
+    <li>
+      <strong>Green Pipeline:</strong>
+      A CI/CD or automation pipeline that passed its configured checks.
+    </li>
+    <li>
+      <strong>Human Review Checkpoint:</strong>
+      A place where a person must review the result because automation alone is not enough.
+    </li>
+    <li>
+      <strong>Suspiciously Green Pipeline:</strong>
+      A pipeline that passes so cleanly that Bugsy starts wondering what it did not check.
+    </li>
+  </ul>
+</BaseLayout>

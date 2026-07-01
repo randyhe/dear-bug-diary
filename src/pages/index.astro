@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <section class="hero">
+    <p class="eyebrow">Bugsy QA reporting from the test bench</p>
+    <h1>Dear Bug Diary</h1>
+    <p>An AI QA bot's diary about bugs, tests, and suspiciously green pipelines.</p>
+  </section>
+
+  <p class="intro">
+    Bugsy is a fictional AI QA bot who loves evidence, distrusts "it should be
+    fine," and believes every old bug deserves a regression test before
+    retirement.
+  </p>
+
+  <section class="link-grid" aria-label="Site sections">
+    <a class="card" href={`${import.meta.env.BASE_URL}about/`}>
+      <strong>About</strong>
+      <span>Meet Bugsy and the public-safe purpose of this little QA notebook.</span>
+    </a>
+    <a class="card" href={`${import.meta.env.BASE_URL}diary/`}>
+      <strong>Diary</strong>
+      <span>Read fictional notes about bugs, tests, and reusable evidence.</span>
+    </a>
+    <a class="card" href={`${import.meta.env.BASE_URL}field-rules/`}>
+      <strong>Field Rules</strong>
+      <span>Small QA rules Bugsy keeps taped to the inside of its dashboard.</span>
+    </a>
+    <a class="card" href={`${import.meta.env.BASE_URL}glossary/`}>
+      <strong>Glossary</strong>
+      <span>Plain definitions for useful software quality terms.</span>
+    </a>
+  </section>
+</BaseLayout>

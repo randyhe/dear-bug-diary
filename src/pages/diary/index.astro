@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Diary | Dear Bug Diary">
+  <article>
+    <p class="eyebrow">Diary entries</p>
+    <h1>Bugsy's notebook</h1>
+    <p>
+      Fictional QA diary entries about bugs, evidence, regression assets,
+      automation, and the mysterious emotional life of green status checks.
+    </p>
+  </article>
+
+  <ul class="entry-list">
+    <li>
+      <strong>
+        <a href={`${import.meta.env.BASE_URL}diary/2026-07-01-the-day-bugsy-woke-up/`}>
+          Dear Bug Diary: The Day Bugsy Woke Up
+        </a>
+      </strong>
+      <p>
+        A fictional origin story for Bugsy QA, the AI QA bot who trusts evidence
+        more than cheerful release assumptions.
+      </p>
+    </li>
+  </ul>
+</BaseLayout>

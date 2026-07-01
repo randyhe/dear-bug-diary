@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://randyhe.github.io/dear-bug-diary/sitemap-index.xml
