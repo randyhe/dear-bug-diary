@@ -1,17 +1,18 @@
 :root {
-  color-scheme: light;
-  --ink: #1f2328;
-  --muted: #687076;
-  --paper: #f8f5ec;
-  --panel: #ffffff;
-  --panel-soft: #fbfaf5;
-  --line: #ddd5c4;
-  --line-strong: #c9bfa9;
-  --accent: #0f766e;
-  --accent-strong: #0f5f59;
-  --warm: #d97706;
-  --alert: #b42318;
-  --shadow: 0 16px 40px rgba(44, 38, 25, 0.08);
+  color-scheme: dark;
+  --ink: #eef6ff;
+  --muted: #a9bdd8;
+  --paper: #08111f;
+  --panel: rgba(15, 25, 48, 0.78);
+  --panel-soft: rgba(19, 33, 62, 0.78);
+  --line: rgba(114, 166, 255, 0.22);
+  --line-strong: rgba(79, 243, 183, 0.5);
+  --accent: #4ff3b7;
+  --accent-strong: #8cf8d2;
+  --warm: #ffd166;
+  --alert: #ff6b8a;
+  --glow: rgba(79, 243, 183, 0.18);
+  --shadow: 0 18px 54px rgba(0, 0, 0, 0.38);
 }
 
 * {
@@ -21,14 +22,17 @@
 body {
   margin: 0;
   background:
-    linear-gradient(rgba(15, 118, 110, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 118, 110, 0.025) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(79, 243, 183, 0.13), transparent 28%),
+    linear-gradient(315deg, rgba(96, 165, 250, 0.13), transparent 30%),
+    linear-gradient(rgba(116, 158, 221, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 158, 221, 0.1) 1px, transparent 1px),
     var(--paper);
-  background-size: 32px 32px;
+  background-attachment: fixed;
+  background-size: auto, auto, 34px 34px, 34px 34px;
   color: var(--ink);
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+    "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
 }
 
@@ -45,6 +49,8 @@ a {
   margin: 0 auto;
   padding: 1.05rem 1.25rem;
   border-bottom: 1px solid var(--line);
+  background: rgba(8, 17, 31, 0.72);
+  backdrop-filter: blur(10px);
 }
 
 .brand {
@@ -66,8 +72,10 @@ a {
   justify-content: center;
   border: 1px solid var(--ink);
   border-radius: 7px;
-  background: #fffdf7;
-  box-shadow: 3px 3px 0 var(--line-strong);
+  background: linear-gradient(135deg, rgba(79, 243, 183, 0.18), rgba(96, 165, 250, 0.12));
+  box-shadow:
+    0 0 0 1px rgba(79, 243, 183, 0.2),
+    0 0 22px var(--glow);
 }
 
 .brand-mark span {
@@ -118,6 +126,7 @@ footer {
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.95rem;
+  background: rgba(8, 17, 31, 0.36);
 }
 
 footer p {
@@ -141,6 +150,7 @@ footer p {
   margin: 0;
   font-size: clamp(3rem, 8vw, 6.25rem);
   line-height: 0.95;
+  text-wrap: balance;
 }
 
 .hero p {
@@ -159,8 +169,11 @@ footer p {
 .feature-strip {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    var(--panel);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
 }
 
 .bugsy-console {
@@ -186,7 +199,9 @@ footer p {
   height: 10px;
   border-radius: 999px;
   background: #22c55e;
-  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
+  box-shadow:
+    0 0 0 4px rgba(34, 197, 94, 0.12),
+    0 0 18px rgba(34, 197, 94, 0.58);
 }
 
 .bugsy-console dl {
@@ -268,10 +283,13 @@ footer p {
 .entry-list li,
 .definition-list li,
 .rule-list li {
-  background: rgba(255, 255, 255, 0.78);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
+    var(--panel-soft);
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 1rem;
+  backdrop-filter: blur(8px);
 }
 
 .card {
@@ -289,7 +307,10 @@ footer p {
 .card:hover,
 .entry-card:hover {
   border-color: var(--line-strong);
-  box-shadow: var(--shadow);
+  box-shadow:
+    var(--shadow),
+    0 0 0 1px rgba(79, 243, 183, 0.08),
+    0 0 34px var(--glow);
   transform: translateY(-2px);
 }
 
@@ -311,6 +332,10 @@ footer p {
   border-left: 4px solid var(--warm);
   padding-left: 1rem;
   color: var(--muted);
+  background: rgba(255, 209, 102, 0.06);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0 8px 8px 0;
 }
 
 article {
@@ -376,6 +401,7 @@ article h2 {
 .tag-row span {
   color: var(--accent-strong);
   text-transform: none;
+  background: rgba(79, 243, 183, 0.08);
 }
 
 article .article-meta {
@@ -391,7 +417,7 @@ article blockquote,
   margin: 1.5rem 0;
   padding: 1rem 1.15rem;
   border-left: 4px solid var(--accent);
-  background: rgba(255, 255, 255, 0.68);
+  background: rgba(79, 243, 183, 0.08);
   border-radius: 0 8px 8px 0;
 }
 
