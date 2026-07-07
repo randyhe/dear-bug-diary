@@ -12,10 +12,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         green pipelines.
       </p>
       <p>
-        It is also a fiction wrapper for a public-safe review of AI-assisted QA
-        methods and the gradual buildout of IQDP, an Intelligent Quality &
-        Delivery Platform.
+        A public-safe portfolio of AI-assisted QA, testing, evidence, and
+        governance work. The diary format turns real QA progress into a readable
+        story while the Progress page tracks the buildout of IQDP, an
+        Intelligent Quality & Delivery Platform.
       </p>
+      <div class="hero-actions" aria-label="Primary actions">
+        <a class="button-link" href={`${import.meta.env.BASE_URL}progress/`}>
+          Explore IQDP progress
+        </a>
+        <a class="text-link" href={`${import.meta.env.BASE_URL}diary/`}>
+          Read the diary
+        </a>
+      </div>
     </div>
     <aside class="bugsy-console" aria-label="Bugsy QA status note">
       <div class="console-top">
@@ -25,8 +34,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <dl>
         <div>
-          <dt>Current suspicion</dt>
-          <dd>Green result, unclear story</dd>
+          <dt>Current focus</dt>
+          <dd>Evidence-first QA workflows</dd>
         </div>
         <div>
           <dt>Favorite artifact</dt>
@@ -34,29 +43,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div>
           <dt>Active context</dt>
-          <dd>Evidence review, open tabs, and one stubborn QA question</dd>
+          <dd>AI-assisted review, reporting, and governance</dd>
         </div>
       </dl>
     </aside>
   </section>
 
-  <section class="feature-strip" aria-label="Latest diary entry">
-    <p class="eyebrow">Latest entry</p>
-    <h2>2026-06-27: The listener learned to restart</h2>
-    <p>
-      A fictional operations note about resilient test workers, restarts,
-      recordings, and why test infrastructure deserves its own evidence.
-    </p>
-    <a class="text-link" href={`${import.meta.env.BASE_URL}diary/2026-06-27-the-listener-learned-to-restart/`}>
-      Read the latest diary entry
-    </a>
+  <section class="home-focus" aria-label="Featured site paths">
+    <article class="feature-strip">
+      <p class="eyebrow">Build progress</p>
+      <h2>Building IQDP as an AI-assisted QA operating model.</h2>
+      <p>
+        Review the capability map, maturity board, phase timeline, and next
+        direction behind the public diary entries.
+      </p>
+      <a class="text-link" href={`${import.meta.env.BASE_URL}progress/`}>
+        Review the progress page
+      </a>
+    </article>
+
+    <article class="feature-strip secondary-feature">
+      <p class="eyebrow">Latest published entry</p>
+      <h2>2026-06-27: The listener learned to restart</h2>
+      <p>
+        A fictional operations note about resilient test workers, restarts,
+        recordings, and why test infrastructure deserves its own evidence.
+      </p>
+      <a class="text-link" href={`${import.meta.env.BASE_URL}diary/2026-06-27-the-listener-learned-to-restart/`}>
+        Read the entry
+      </a>
+    </article>
   </section>
 
   <section class="link-grid" aria-label="Site sections">
-    <a class="card" href={`${import.meta.env.BASE_URL}about/`}>
-      <strong>About</strong>
-      <span>Meet Bugsy and the public-safe purpose of this little QA notebook.</span>
-    </a>
     <a class="card" href={`${import.meta.env.BASE_URL}progress/`}>
       <strong>Progress</strong>
       <span>Review the IQDP capability map, phase timeline, and next direction.</span>
@@ -69,9 +88,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <strong>Field Rules</strong>
       <span>Small QA rules Bugsy keeps taped to the inside of its dashboard.</span>
     </a>
-    <a class="card" href={`${import.meta.env.BASE_URL}glossary/`}>
-      <strong>Glossary</strong>
-      <span>Plain definitions for useful software quality terms.</span>
+    <a class="card" href={`${import.meta.env.BASE_URL}about/`}>
+      <strong>About</strong>
+      <span>Meet Bugsy, the public-safe diary format, and the glossary of QA terms.</span>
     </a>
   </section>
 </BaseLayout>
